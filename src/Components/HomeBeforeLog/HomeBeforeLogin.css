@@ -1,0 +1,315 @@
+.slider-container {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  /* Hide the overflowing content */
+}
+
+.slide {
+  position: relative;
+}
+
+.slide img {
+  width: 100%;
+  /* Ensure image takes the full width */
+  height: 650px;
+  object-fit: cover;
+  /* Cover the entire slide */
+}
+
+.slide-text {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  color: white;
+  font-size: 24px;
+  /* background-color: rgba(0, 0, 0, 0.5); Semi-transparent background for the text container */
+  padding: 10px;
+  border-radius: 5px;
+  max-width: 80%;
+}
+
+.slide-text-last {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  color: white;
+  font-size: 24px;
+  background-color: rgba(0, 0, 0, 0.5);
+  /* Semi-transparent background for the text container */
+  padding: 10px;
+  border-radius: 5px;
+  max-width: 80%;
+  min-width: 20%;
+}
+
+.heading {
+  font-size: 36px;
+  /* Increase the font size for "Joboard" */
+  font-weight: bold;
+  /* Make "Joboard" bold */
+  margin-bottom: 10px;
+  /* Add some space below "Joboard" */
+}
+
+.subtext {
+  font-size: 18px;
+  /* Smaller font size for the subtext */
+  margin-bottom: 15px;
+}
+
+.learn-more-btn {
+  font-size: 18px;
+  color: white;
+  background-color: #a1d244;
+  /* Initial background color */
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.learn-more-btn:hover {
+  background-color: transparent;
+  /* Remove background color on hover */
+  border: 1px solid #007bff;
+  /* Add a border to indicate it's a button */
+}
+
+
+/* Custom pagination bullets */
+.slick-dots li button:before {
+  content: '';
+  /* Removes default dot content */
+  background-color: #f4f9f9;
+  /* Default color for pagination bullets */
+  border-radius: 50%;
+  /* Circular bullets */
+  border: 2px solid #333;
+  /* Dark bold border */
+  width: 15px;
+  /* Bullet size */
+  height: 15px;
+  display: block;
+  transition: background-color 0.3s ease;
+}
+
+/* Active bullet styling */
+.slick-dots li.slick-active button:before {
+  background-color: #d2d2d8;
+  /* Color for active bullet */
+}
+
+/* Positioning the pagination dots */
+.slick-dots {
+  bottom: 20px;
+  /* Adjust to position dots closer or farther from the bottom */
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  /* Spacing between bullets */
+}
+
+.container-2 {
+  margin-top: -7px;
+  background-color: #017b46;
+  height: 350px;
+  position: relative;
+  padding-top: 10px;
+  margin-bottom: 300px;
+}
+
+.heading-2 {
+  font-size: 40px;
+  padding: 20px;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.subtext-2 {
+  font-size: 20px;
+  padding: 20px;
+  color: #92da2e;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.card-container {
+  display: flex;
+  flex-direction: row;
+  /* Aligns items in a row */
+  gap: 20px;
+  /* Optional: spacing between cards */
+  flex-wrap: wrap;
+  /* Allows wrapping to the next line if the row overflows */
+  justify-content: center;
+  /* Aligns items in the center */
+  align-items: center;
+  /* Aligns items in the center */
+  padding-top: 30px;
+  /* margin-bottom: 550px; */
+}
+
+.card {
+  /* background-color: #f4f9f9; */
+  /* border-radius: 10px; */
+  /* padding: 20px; */
+  /* box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); */
+  width: 420px;
+  /* Increase width to make the card visible */
+  height: 270px;
+  /* Increase height for better view */
+  margin: 20px;
+  position: relative;
+  /* Positioning needed to control .small-card positioning */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* Center-aligns .small-card horizontally */
+}
+
+.card img {
+  width: 100%;
+  /* Image covers the entire width of the card */
+  height: 100%;
+  /* Image covers the entire height of the card */
+  object-fit: cover;
+  /* Cover the card area, maintaining aspect ratio */
+  border-radius: 10px;
+  /* Rounded corners for the top */
+  position: relative;
+}
+
+.small-card {
+  margin-top: -30px;
+  position: relative;
+  background-color: white;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  width: 350px;
+  height: 70px;
+  border-radius: 10px;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 50px;
+  transition: background-color 0.6s ease, transform 0.6s ease; /* Smoother transition */
+}
+
+.card img:hover,
+.small-card:hover {
+  border: 2px solid #0b6624;                                              /* Dark green border on hover */
+  transform: scale(1.08);                                                   /* Zooms the image and small card slightly */
+  transition: transform 0.6s ease, box-shadow 0.6s ease, border 0.6s ease;   /* Smooth transition */
+  background: #26ae61;
+}
+
+.small-card:hover p {
+  color: white;                                                          /* Changes text color inside .small-card on hover */
+  transition: color 0.6s ease;                                               /* Smooth color transition */
+}
+
+
+.container-3 {
+  background-color: #f4f5fa;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  align-items: center;
+  height: 390px; /* Makes the container take the full viewport height */
+  border-top: 2px solid #0b6624;
+  border-bottom: 2px solid #0b6624;
+}
+.Categories{
+  border-color: #26ae61;
+  border-width: 2px;
+}
+.Categories:hover{
+  background-color: #26ae61;
+  color: white;
+  transition: background-color 0.3s ease;
+  cursor: pointer;
+}
+
+.text-1 {
+  font-size: 40px;
+  padding-bottom: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.text-2 {
+  font-size: 20px;
+  max-width: 600px;
+  margin: 0 auto;     /*Centers text block horizontally*/
+  padding-bottom: 35px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.container-3-items {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.items {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.items svg {
+  width: 80px;  /* Adjust width to make SVG icons smaller */
+  height: 80px; /* Adjust height to make SVG icons smaller */
+}
+
+.container-4 {
+  padding-top: 50px;
+  padding-bottom: 50px;
+  margin-top: 60px;
+  margin-bottom: 100px;
+  /* background-color: #0b6624; */
+}
+
+
+.company-card{
+  color: white;
+  border: 2px solid #26ae61;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  width: 450px;
+  height: auto;
+  margin: 20px;
+  /* background-color: #26ae61; */
+  background: linear-gradient(185deg, #26ae61 0%, #1ec97a 50%, #02d68f 100%);
+}
+
+
+.company-card img {
+  width: 50%;
+  height: 50%;
+  padding-bottom: 10px;
+}
+
+.Testimonial {
+  background-color: #f4f5fa;
+  /* border: 5px solid #26ae61; */
+  margin: 50px;
+  padding: 10px;
+}
+
+/* .Testimonial:hover {
+  background-color: #26ae61;
+  color: white;
+  transition: background-color 0.3s ease;
+  cursor: pointer;
+} */

@@ -1,0 +1,112 @@
+.footer {
+  background-image: url(https://utouchdesign.com/themes/envato/escort/assets/img/bg-new.png);
+  background-color: #26ae61;
+  color: white;
+  padding: 3rem 0;
+}
+
+.footer .footer-title {
+  font-size: 1.25rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.footer .footer-links {
+  list-style: disc;
+  /* color: #aaa; */
+  color: black;
+  transition: color 0.3s ease;
+}
+
+.footer .footer-links li:hover { 
+  color: #dfe4ed; 
+  cursor: pointer;
+}
+
+
+.left-item {
+  align-items: flex-start;
+  transition: color 0.3s ease;
+}
+
+
+.footer-links {
+  list-style-type: disc; 
+  padding-left: 15px; 
+}
+
+
+
+
+/* Right Section (Contact Form) */
+.form-container {
+  width: 500px; /* Adjust as needed */
+  margin: auto;
+  padding: 24px;
+  background-color: white;
+  border-radius: 8px; /* Tailwind's rounded-lg */
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Tailwind's shadow-md */
+}
+
+.form-title {
+  font-size: 1.875rem; /* Tailwind's text-3xl */
+  font-weight: bold;
+  margin-bottom: 24px; 
+  color: #4A5568; 
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px; /* Space between form elements */
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-input,
+.form-textarea {
+  padding: 12px; /* Space inside the input */
+  border: 1px solid #CBD5E0; 
+  border-radius: 4px; /* Rounded corners */
+  transition: border-color 0.3s ease;
+}
+
+.form-input:focus,
+.form-textarea:focus {
+  border-color: #3B82F6; 
+  outline: none; /* Remove outline */
+}
+
+.form-button {
+  padding: 12px 16px;
+  background-color: #26ae61; 
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.form-button:hover {
+  background-color: #136034; 
+}
+
+.status-message {
+  margin-top: 8px; 
+  font-size: 0.875rem; 
+}
+
+.success {
+  color: #38A169; 
+}
+
+.error {
+  color: #E53E3E; 
+}
