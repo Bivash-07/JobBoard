@@ -1,0 +1,69 @@
+/* Navbar.css */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: black;
+    opacity: 0.6;
+    /* background-color: transparent; */
+    color: white;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    /* Ensure the navbar is on top of other elements */
+}
+
+.logo-link {
+    display: inline-block;
+    text-decoration: none;
+    /* Remove any default link styles */
+}
+
+.logo-container {
+    width: 250px;
+    /* Adjust size as needed */
+    height: 50px;
+    overflow: hidden;
+    /* Crop overflow of the image */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo-image {
+    width: 150px;
+    /* Increase width beyond container size */
+    height: 150px;
+    /* Increase height beyond container size */
+    object-fit: cover;
+    /* Cover the container without distortion */
+}
+
+.navbar-links {
+    display: flex;
+    gap: 20px;
+    flex: 1;
+    justify-content: center;
+    /* Center the links in the navbar */
+    font-size: 20px;
+}
+
+.navbar-links a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.navbar-links a:hover {
+    color: #f0a500;
+    /* Change to a different color on hover */
+}
+
+.navbar-auth {
+    display: flex;
+    gap: 15px;
+    font-size: 20px;
+    padding: 5px;
+}
