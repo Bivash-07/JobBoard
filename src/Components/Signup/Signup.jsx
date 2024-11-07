@@ -210,7 +210,7 @@ function Signup() {
                 className="role-select"
               >
                 <option value="Job Seeker">Job Seeker</option>
-                <option value="Recruiter">Recruiter</option>
+                <option value="Job Provider">Job Provider</option>
               </select>
             </div>
 
