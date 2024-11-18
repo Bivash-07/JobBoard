@@ -1,0 +1,101 @@
+/* Container styling */
+.job-category-area {
+    padding: 80px 0;
+    background-color: #f8f9fa;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.heading {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.heading h2 {
+    font-size: 36px;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.heading p {
+    font-size: 18px;
+    color: #666;
+}
+
+.job-categories-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* Fixed 4 columns */
+    gap: 30px;
+}
+
+.category-card {
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    text-decoration: none;
+    color: #333;
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.category-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.category-icon {
+    font-size: 48px;
+    color: #4CAF50; /* Example color for icon */
+    margin-bottom: 20px;
+}
+
+.category-details h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.category-details p {
+    font-size: 16px;
+    color: #666;
+}
+
+.view-all-btn {
+    text-align: center;
+    margin-top: 50px;
+}
+
+.btn.theme-btn {
+    background-color: #4CAF50; /* Same color as icon */
+    color: #fff;
+    padding: 12px 30px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 18px;
+    transition: background-color 0.3s ease;
+}
+
+.btn.theme-btn:hover {
+    background-color: #45A049;
+}
+
+/* Responsive adjustments */
+@media (max-width: 992px) {
+    .job-categories-grid {
+        grid-template-columns: repeat(2, 1fr); /* 2 columns for medium screens */
+    }
+}
+
+@media (max-width: 576px) {
+    .job-categories-grid {
+        grid-template-columns: 1fr; /* 1 column for small screens */
+    }
+}

@@ -1,5 +1,4 @@
 // import LogedinNavbar from "../Navbar/LogedinNavbar"
-import Header from "../Header";
 import SearchBar from "../SearchBar";
 import JobCard from "../JobCard";
 import jobData from '../../JobDummyData';
@@ -36,27 +35,6 @@ function Main() {
     });
     setJobs(tempJobs);
   }
-
-
-//   const fetchJobsCustom = async (jobCriteria) => {
-//     setCustomSearch(true);
-//     const tempJobs = []
-//     const jobsRef = query(collection(db, "jobs"));
-//     const q = query(jobsRef, where("type", "==", jobCriteria.type), where("title", "==", jobCriteria.title), where("experience", "==", jobCriteria.experience), where("location", "==", jobCriteria.location), orderBy("postedOn", "desc"));
-//     const req = await getDocs(q);
-
-//     req.forEach((job) => {
-//       // console.log(doc.id, " => ", doc.data());
-//       tempJobs.push({
-//         ...job.data(),
-//         id: job.id,
-//         postedOn: job.data().postedOn.toDate()
-//       })
-//     });
-//     setJobs(tempJobs);
-//   }
-
-
 
   const fetchJobsCustom = async (jobCriteria) => {
     setCustomSearch(true);
@@ -122,13 +100,20 @@ function Main() {
 
 
   return (
-    <div>
+    <div className="mb-20">
       {/* <Navbar /> */}
-      <Header />
+      <div className="mt-10 flex flex-col gap-5 items-center justify-center ">
+        <h1 className="text-5xl font-bold">
+          Your ideal job awaits, start the search
+        </h1>
+        <p className="text-xl">Get latest job openings that best suits you!</p>
+      </div>
       <SearchBar fetchJobsCustom={fetchJobsCustom} resetTrigger={resetTrigger} setResetTrigger={setResetTrigger} />
       {customSearch &&
         <button onClick={resetFilters} className="flex pl-[1250px] mb-2">
-          <p className="bg-blue-500 px-10 py-2 rounded-md text-white">Clear Filters</p>
+          {/* <p className="bg-blue-500 px-10 py-2 rounded-md text-white">Clear Filters</p> */}
+          <p className="bg-[#26ae61] ml-4 px-10 py-2 rounded-md text-white">Clear Filters</p>
+
         </button>
       }
       {jobs.map((job) => (

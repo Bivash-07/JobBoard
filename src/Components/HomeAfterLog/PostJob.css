@@ -1,0 +1,122 @@
+/* HomePage.css */
+
+.home-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px;
+    padding-top: 120px;
+    font-family: Arial, sans-serif;
+  }
+  
+  .home-header {
+    text-align: center;
+    /* margin-bottom: 50px; */
+  }
+  
+  .home-header h1 {
+    font-size: 48px;
+    color: #4CAF50;
+    margin-bottom: 10px;
+  }
+  
+  .home-header p {
+    font-size: 18px;
+    color: #666;
+  }
+  
+  .home-main {
+    display: flex;
+    justify-content: center;
+    margin-top: 45px;
+
+  }
+  
+  .job-post-form {
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    padding: 40px;
+    width: 100%;
+    max-width: 600px;
+  }
+  
+  .job-post-form h2 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+  .form-group {
+    margin-bottom: 20px;
+    position: relative;
+  }
+  
+  .form-icon {
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #4CAF50;
+  }
+  
+  .form-group input,
+  .form-group select {
+    width: 100%;
+    padding: 12px 40px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #f8f9fa;
+  }
+  
+  .form-group input:focus,
+  .form-group select:focus {
+    outline: none;
+    border-color: #4CAF50;
+    box-shadow: 0 0 0 2px rgba(76, 175, 80, 0.2);
+  }
+  
+  .submit-btn {
+    width: 100%;
+    padding: 12px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .submit-btn:hover {
+    background-color: #45a049;
+  }
+  
+  .success-message {
+    background-color: #dff0d8;
+    color: #3c763d;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .home-container {
+      padding: 20px;
+    }
+  
+    .job-post-form {
+      padding: 20px;
+    }
+  
+    .home-header h1 {
+      font-size: 36px;
+    }
+  
+    .home-header p {
+      font-size: 16px;
+    }
+  }

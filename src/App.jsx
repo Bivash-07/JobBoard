@@ -166,6 +166,11 @@ import Login from "./components/Login/Login";
 import Signup from "./components/Signup/Signup";
 import HomeBeforeLogin from "./components/HomeBeforeLog/HomeBeforeLogin";
 import "./App.css";
+import JobCategoriesPage from "./components/HomeAfterLog/JobCategoriesPage";
+import Footer from "./components/HomeBeforeLog/Footer";
+import LatestJobsPage from "./components/HomeAfterLog/LatestJobsPage";
+import HomeJobProvider from "./components/HomeAfterLog/HomeJobProvider";
+import PostJob from "./components/HomeAfterLog/PostJob";
 
 function App() {
   const [userName, setUserName] = useState("");
@@ -197,6 +202,12 @@ function App() {
           <Route path="/signup" element={<Signup />} />
           <Route path="/" element={<HomeAfterLog name={userName} />} />
           <Route path="/home" element={<HomeBeforeLogin />} />
+          <Route path="/footer" element={<Footer />} />
+          <Route path="/LatestJobsPage" element={<LatestJobsPage />} />
+          <Route path="/JobCategoriesPage" element={<JobCategoriesPage />} />
+          <Route path="/HomeJobProvider" element={<HomeJobProvider />} />
+          <Route path="/PostJob" element={<PostJob />} />
+          
         </Routes>
       </Router>
     </div>

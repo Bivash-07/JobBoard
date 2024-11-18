@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import "./NavBeforeLog.css";
 import { HashLink } from 'react-router-hash-link';
 import L1 from "../../assets/images/logo.png";
+import L2 from "../../assets/images/logo2.png";
 
 
 
@@ -21,7 +22,7 @@ function NavBeforeLog({ isLoggedIn, onSignOut }) {
         {/* <Link to="/">Joboard:)</Link> */}
         <HashLink to="#slider-container" scroll={scrollWithOffset} className="logo-link">
           <div className="logo-container">
-            <img src={L1} alt="logo" className="logo-image" />
+            <img src={L2} alt="logo" className="logo-image" />
           </div>
         </HashLink>
 

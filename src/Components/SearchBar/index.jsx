@@ -70,7 +70,7 @@ function SearchBar({ fetchJobsCustom, resetTrigger, setResetTrigger }) {
                 <option value="Mid Level">Mid Level</option>
                 <option value="Senior Level">Senior Level</option>
             </select>
-            <button onClick={search} className='w-64 bg-blue-500 text-white font-bold py-3 rounded-md'>Search</button>
+            <button onClick={search} className='w-64 bg-[#26ae61] text-white font-bold py-3 rounded-md'>Search</button>
         </div>
     );
 }

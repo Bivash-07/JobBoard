@@ -31,14 +31,14 @@ const HomeBeforeLogin = () => {
 
   return (
     <>
-      <div> 
+      <div className="mb-20"> 
         <NavBeforeLog />
       </div>
       
       <div id="slider-container" className="slider-container">
         <Slider {...settings}>
           <div className="slide">
-            <img src={P1} alt="Slide 1" />
+            <img src={P4} alt="Slide 1" />
             <div className="slide-text">
               <p className="heading">Joboard</p>
               <p className="subtext">
@@ -67,7 +67,7 @@ const HomeBeforeLogin = () => {
             </div>
           </div>
           <div className="slide">
-            <img src={P4} alt="Slide 4" />
+            <img src={P1} alt="Slide 4" />
             <div className="slide-text-last">
               <p className="subtext">
                 Choose your ideal work setting: Remote or Onsite.

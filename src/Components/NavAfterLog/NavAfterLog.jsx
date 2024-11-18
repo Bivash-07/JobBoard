@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import "./NavAfterLog.css"; 
 import { HashLink } from 'react-router-hash-link';
 import L1 from "../../assets/images/logo.png";
+import L2 from "../../assets/images/logo2.png";
 
 
 
@@ -20,27 +21,22 @@ function NavAfterLog({ isLoggedIn, onSignOut }) {
         {/* <Link to="/">Joboard:)</Link> */}
         <HashLink to="#Home" scroll={scrollWithOffset} className="logo-link">
           <div className="logo-container">
-            <img src={L1} alt="logo" className="logo-image" />
+            <img src={L2} alt="logo" className="logo-image" />
           </div>
           </HashLink>
 
       </div>
       <div className="navbar-links">
-        {/* <Link to="/" scroll={scrollWithOffset}>Home</Link> */}
-        <HashLink to="#Home" scroll={scrollWithOffset}>Home</HashLink>
+        <Link to="/" scroll={scrollWithOffset}>Home</Link>
+        {/* <HashLink to="#Home" scroll={scrollWithOffset}>Home</HashLink> */}
         <HashLink to="#Jobs" scroll={scrollWithOffset}>Browse-Jobs</HashLink>
         <HashLink to="#Categories" scroll={scrollWithOffset}>Browse-Categories</HashLink>
-        <HashLink to="#Footer" scroll={scrollWithOffset}>Contact Us</HashLink>
+        <HashLink to="#Contact-Us" scroll={scrollWithOffset}>Contact Us</HashLink>
       </div>
       <div className="navbar-auth">
-        {!isLoggedIn ? (
-          <>
-            <Link to="/login">Login</Link>
-            <Link to="/signup">Signup</Link>
-          </>
-        ) : (
+        
           <button onClick={onSignOut}>SignOut</button>
-        )}
+      
       </div>
     </nav>
   );

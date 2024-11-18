@@ -5,9 +5,9 @@
   align-items: center;
   padding: 1rem 2rem;
   background-color: black;
-  opacity: 0.6;
+  /* opacity: 0.6; */
   /* background-color: transparent; */
-  color: white;
+  color: black;
   position: fixed;
   top: 0;
   width: 100%;
@@ -41,16 +41,19 @@
   /* Cover the container without distortion */
 }
 
+/* Center navbar links */
 .navbar-links {
+  position: absolute;  /* Absolute positioning */
+  left: 50%;           /* Moves it to the center of the navbar */
+  transform: translateX(-50%);  /* Centers it perfectly */
   display: flex;
   gap: 20px;
-  flex: 1;
-  justify-content: center;
-  /* Center the links in the navbar */
+  font-size: 18px;
 }
 
 .navbar-links a {
-  color: white;
+  /* color: white; */
+  color: black;
   text-decoration: none;
   transition: color 0.3s ease;
 }
