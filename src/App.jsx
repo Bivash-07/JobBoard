@@ -2,16 +2,16 @@ import React, { useEffect, useState } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { getAuth, setPersistence, onAuthStateChanged, browserLocalPersistence } from "firebase/auth";
 
-import Home from "./Component/HomeAfterLog/Home";
-import Login from "./Component/Login/Login";
-import Signup from "./Component/Signup/Signup";
-import HomeBeforeLogin from "./Component/HomeBeforeLog/HomeBeforeLogin";
+import Home from "./Components/HomeAfterLog/Home";
+import Login from "./Components/Login/Login";
+import Signup from "./Components/Signup/Signup";
+import HomeBeforeLogin from "./Components/HomeBeforeLog/HomeBeforeLogin";
 import "./App.css";
-import JobCategoriesPage from "./Component/HomeAfterLog/JobCategoriesPage";
-import Footer from "./Component/HomeBeforeLog/Footer";
-import LatestJobsPage from "./Component/HomeAfterLog/LatestJobsPage";
-import HomeJobProvider from "./Component/HomeAfterLog/HomeJobProvider";
-import PostJob from "./Component/HomeAfterLog/PostJob";
+import JobCategoriesPage from "./Components/HomeAfterLog/JobCategoriesPage";
+import Footer from "./Components/HomeBeforeLog/Footer";
+import LatestJobsPage from "./Components/HomeAfterLog/LatestJobsPage";
+import HomeJobProvider from "./Components/HomeAfterLog/HomeJobProvider";
+import PostJob from "./Components/HomeAfterLog/PostJob";
 
 function App() {
   const [userName, setUserName] = useState("");
