@@ -42,11 +42,14 @@ const Footer = () => {
     setButtonText("Submit");
 
     let result = await response.json();
-    if (result.success) {
-      setStatus({ success: true, message: 'Message sent successfully' });
-      setFormDetails(formInitialDetails);
-    } else {
-      setStatus({ success: false, message: 'Something went wrong, please try again later.' });
+      if (result.success) {
+        setStatus({ success: true, message: 'Message sent successfully' });
+        setFormDetails(formInitialDetails);
+      } else {
+        setStatus({ success: false, message: 'Something went wrong, please try again later.' });
+      }
+    } catch (error) {
+      setStatus({ success: false, message: `Error: ${error.message}` });
     }
   };
 
