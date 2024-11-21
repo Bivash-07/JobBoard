@@ -25,7 +25,7 @@ const Footer = () => {
     setButtonText("Sending...");
 
     const formData = {
-      access_key: "ae13dc85-f68c-4faa-8b7a-6f4c8d2b9531",
+      access_key: VITE_WEB3FORM_ACCESS_KEY,
       name: formDetails.name,
       email: formDetails.email,
       message: formDetails.message,

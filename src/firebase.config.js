@@ -10,12 +10,12 @@ import { getAuth } from "firebase/auth";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyDE07vpiOgeqs2M0nCBTVR8wnBD3HKtOJA",
-  authDomain: "jobportal-d2833.firebaseapp.com",
-  projectId: "jobportal-d2833",
-  storageBucket: "jobportal-d2833.appspot.com",
-  messagingSenderId: "542813832229",
-  appId: "1:542813832229:web:07ae2caa1fd19953fb2bcc"
+  apiKey: import.meta.env.VITE_FIREBASE_API_KEY,
+  authDomain: import.meta.env.VITE_FIREBASE_AUTH_DOMAIN,
+  projectId: import.meta.env.VITE_FIREBASE_PROJECT_ID,
+  storageBucket: import.meta.env.VITE_FIREBASE_STORAGE_BUCKET,
+  messagingSenderId: import.meta.env.VITE_FIREBASE_MESSAGING_SENDER_ID,
+  appId: import.meta.env.VITE_FIREBASE_APP_ID
 };
 
 // Initialize Firebase
