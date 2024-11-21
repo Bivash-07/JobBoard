@@ -2,7 +2,8 @@ import React, { useEffect, useState } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { getAuth, setPersistence, onAuthStateChanged, browserLocalPersistence } from "firebase/auth";
 
-import Home from "./components/HomeAfterLog/Home";
+// import Home from "./components/HomeAfterLog/Home";
+import Home from "./Component/HomeAfterLog/Home";
 import Login from "./components/Login/Login";
 import Signup from "./components/Signup/Signup";
 import HomeBeforeLogin from "./components/HomeBeforeLog/HomeBeforeLogin";
