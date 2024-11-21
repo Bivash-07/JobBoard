@@ -23,34 +23,30 @@ const Footer = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     setButtonText("Sending...");
-    
-    try {
-      const formData = {
-        access_key:  import.meta.env.VITE_WEB3FORM_ACCESS_KEY,
-        name: formDetails.name,
-        email: formDetails.email,
-        message: formDetails.message,
-      };
 
-      let response = await fetch("https://api.web3forms.com/submit", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json;charset=utf-8",
-        },
-        body: JSON.stringify(formData),
-      });
+    const formData = {
+      access_key:  import.meta.env.VITE_WEB3FORM_ACCESS_KEY,
+      name: formDetails.name,
+      email: formDetails.email,
+      message: formDetails.message,
+    };
 
-      setButtonText("Submit");
+    let response = await fetch("https://api.web3forms.com/submit", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json;charset=utf-8",
+      },
+      body: JSON.stringify(formData),
+    });
 
-      let result = await response.json();
-        if (result.success) {
-          setStatus({ success: true, message: 'Message sent successfully' });
-          setFormDetails(formInitialDetails);
-        } else {
-          setStatus({ success: false, message: 'Something went wrong, please try again later.' });
-        }
-    } catch (error) {
-      setStatus({ success: false, message: `Error: ${error.message}` });
+    setButtonText("Submit");
+
+    let result = await response.json();
+    if (result.success) {
+      setStatus({ success: true, message: 'Message sent successfully' });
+      setFormDetails(formInitialDetails);
+    } else {
+      setStatus({ success: false, message: 'Something went wrong, please try again later.' });
     }
   };
 
