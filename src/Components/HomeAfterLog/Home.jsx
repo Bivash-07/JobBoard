@@ -12,36 +12,35 @@ import HomeJobProvider from "./HomeJobProvider";
 
 function Home() {
   const [name, setName] = useState(null);
-  const [userRole, setUserRole] = useState(''); // "Job Seeker" or "Job Provider"
+  const [userRole, setUserRole] = useState(''); 
   const auth = getAuth();
 
   useEffect(() => {
-    // Listen for changes in authentication state
+    
     const unsubscribe = onAuthStateChanged(auth, (user) => {
       if (user) {
-        setName(user.displayName || user.email); // If the user is logged in, set their name or email
+        setName(user.displayName || user.email); 
 
-        // Retrieve the user role from your data source
-        // For example, if using local storage:
+        
         const role = localStorage.getItem("userRole");
-        setUserRole(role); // Set the retrieved role
+        setUserRole(role); 
 
-        // Log the user role to verify it's being set correctly
+        
         console.log("User Role after login:", role);
       } else {
-        setName(null); // If the user is signed out, clear the name
+        setName(null); 
         setUserRole('');
       }
     });
 
-    // Cleanup the listener when the component unmounts
+    
     return () => unsubscribe();
   }, [auth]);
 
   const handleSignOut = () => {
     signOut(auth)
       .then(() => {
-        localStorage.removeItem("userRole"); // Clear user role on sign-out and Sign-out successful, redirect or update state
+        localStorage.removeItem("userRole"); 
       })
       .catch((error) => {
         console.error("Error signing out:", error);
