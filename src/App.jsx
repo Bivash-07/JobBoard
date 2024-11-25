@@ -18,7 +18,7 @@ function App() {
   const auth = getAuth();
 
   useEffect(() => {
-    // Set persistence to local so user remains logged in across sessions
+    
     setPersistence(auth, browserLocalPersistence)
       .then(() => {
         // Set up an auth state listener

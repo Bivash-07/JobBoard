@@ -10,7 +10,7 @@ import L2 from "../../assets/images/logo2.png";
 
 function scrollWithOffset(el) {
   const yCoordinate = el.getBoundingClientRect().top + window.pageYOffset;
-  const yOffset = -100; // Adjust this to control the offset
+  const yOffset = -100; 
   window.scrollTo({ top: yCoordinate + yOffset, behavior: 'smooth' });
 }
 

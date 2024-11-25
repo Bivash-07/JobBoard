@@ -41,7 +41,7 @@ function Main() {
     const tempJobs = [];
     let filters = [];
 
-    // Dynamically add where conditions based on jobCriteria
+    
     if (jobCriteria.type && jobCriteria.type !== "unset") {
       filters.push(where("type", "==", jobCriteria.type));
     }

@@ -9,7 +9,7 @@ const SignOutButton = () => {
   const handleSignOut = () => {
     signOut(auth)
       .then(() => {
-        // Redirect to home page after successful sign out
+        
         navigate('/');
       })
       .catch((error) => {

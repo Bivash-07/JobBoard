@@ -1,117 +1,8 @@
-// import React, { useState } from "react";
-// import { Link, useNavigate } from "react-router-dom";
-// import { createUserWithEmailAndPassword, updateProfile } from "firebase/auth";
-// import { auth } from "../../firebase.config";
-// import Navbar from "../Navbar/Navbar";
-// import "./Signup.css";
-
-// function Signup() {
-//   const navigate = useNavigate();
-//   const [values, setValues] = useState({
-//     name: "",
-//     email: "",
-//     pass: "",
-//   });
-//   const [errorMsg, setErrorMsg] = useState("");
-//   const [submitButtonDisabled, setSubmitButtonDisabled] = useState(false);
-
-//   const handleSubmission = () => {
-//     if (!values.name || !values.email || !values.pass) {
-//       setErrorMsg("Please fill in all fields.");
-//       return;
-//     }
-//     setErrorMsg("");
-//     setSubmitButtonDisabled(true);
-
-//     createUserWithEmailAndPassword(auth, values.email, values.pass)
-//       .then(async (res) => {
-//         setSubmitButtonDisabled(false);
-//         const user = res.user;
-//         await updateProfile(user, { displayName: values.name });
-//         navigate("/");
-//       })
-//       .catch((err) => {
-//         setSubmitButtonDisabled(false);
-//         setErrorMsg(err.message);
-//       });
-//   };
-
-//   return (
-//     <>
-//       <div className="Navbar">
-//         <Navbar />
-//       </div>
-
-//       <div className="signup-page">
-//         <div className="signup-form-container">
-//           <div className="signup-form">
-//             <h1>Welcome</h1>
-//             <p>Please register to your account</p>
-
-//             <div className="input-group">
-//               <label htmlFor="name">Name</label>
-//               <input
-//                 id="name"
-//                 type="text"
-//                 placeholder="Enter your name"
-//                 onChange={(e) => setValues({ ...values, name: e.target.value })}
-//               />
-//             </div>
-
-//             <div className="input-group">
-//               <label htmlFor="email">Email</label>
-//               <input
-//                 id="email"
-//                 type="email"
-//                 placeholder="Enter your email address"
-//                 onChange={(e) => setValues({ ...values, email: e.target.value })}
-//               />
-//             </div>
-
-//             <div className="input-group">
-//               <label htmlFor="password">Password</label>
-//               <input
-//                 id="password"
-//                 type="password"
-//                 placeholder="Enter your password"
-//                 onChange={(e) => setValues({ ...values, pass: e.target.value })}
-//               />
-//             </div>
-
-//             <div className="signup-footer">
-//               {errorMsg && <p className="error">{errorMsg}</p>}
-//               <button
-//                 className="signup-button"
-//                 onClick={handleSubmission}
-//                 disabled={submitButtonDisabled}
-//               >
-//                 {submitButtonDisabled ? "Signing up..." : "Signup"}
-//               </button>
-//               <Link to="/" className="back-home">Back to Home</Link>
-//               <p className="sign-up-text">
-//                 Have an account? <Link to="/login" className="sign-up-link">Login</Link>
-//               </p>
-//             </div>
-//           </div>
-//         </div>
-//       </div>
-//     </>
-//   );
-// }
-
-// export default Signup;
-
-
-
-
-
-
-
 import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { createUserWithEmailAndPassword, updateProfile } from "firebase/auth";
 import { doc, setDoc } from "firebase/firestore";
-import { auth, db } from "../../firebase.config"; // Import Firestore `db` instance
+import { auth, db } from "../../firebase.config"; 
 import NavBeforeLog from "../NavBeforeLog/NavBeforeLog";
 import "./Signup.css";
 
@@ -121,7 +12,7 @@ function Signup() {
     name: "",
     email: "",
     pass: "",
-    role: "Job Seeker" // Default role
+    role: "Job Seeker" 
   });
   const [errorMsg, setErrorMsg] = useState("");
   const [submitButtonDisabled, setSubmitButtonDisabled] = useState(false);
@@ -139,10 +30,10 @@ function Signup() {
         setSubmitButtonDisabled(false);
         const user = res.user;
 
-        // Update the display name
+        
         await updateProfile(user, { displayName: values.name });
 
-        // Save user data in Firestore based on role
+        
         const collectionName = values.role === "Job Seeker" ? "JobSeekers" : "JobProviders";
         await setDoc(doc(db, collectionName, user.uid), {
           name: values.name,

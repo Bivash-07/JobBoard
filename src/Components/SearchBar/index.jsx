@@ -24,7 +24,7 @@ function SearchBar({ fetchJobsCustom, resetTrigger, setResetTrigger }) {
     }
 
 
-    // Reset filters when the clear button is clicked
+    
     useEffect(() => {
         if (resetTrigger) {
             setJobCriteria({
@@ -33,7 +33,7 @@ function SearchBar({ fetchJobsCustom, resetTrigger, setResetTrigger }) {
                 experience: "",
                 type: ""
             });
-            setResetTrigger(false); // Reset the trigger
+            setResetTrigger(false); 
         }
     }, [resetTrigger, setResetTrigger]);
 
